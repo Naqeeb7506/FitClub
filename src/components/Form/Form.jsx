@@ -1,24 +1,28 @@
 import React, { useRef } from "react";
 import "./Form.css";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Form = () => {
   const form = useRef();
   const sendEmail = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs
-      .sendForm("service_fjm6rq7", "template_sv3pytv", form.current, {
-        publicKey: "Wfebi1blU1Pt5J7RI",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
+  emailjs
+    .sendForm("service_fjm6rq7", "template_sv3pytv", form.current, {
+      publicKey: "Wfebi1blU1Pt5J7RI",
+    })
+    .then(
+      () => {
+        toast.success("Email sent successfully!");
+        form.current.reset(); // Optional: reset form
+      },
+      (error) => {
+        toast.error("Failed to send email. Please try again.");
+        console.log("FAILED...", error.text);
+      }
+    );
+};
   return (
     <div className="form" id="form">
       <div className="container">
@@ -40,6 +44,7 @@ const Form = () => {
           </form>
         </div>
       </div>
+      <ToastContainer /> 
     </div>
   );
 };
