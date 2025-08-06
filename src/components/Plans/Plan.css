@@ -1,0 +1,179 @@
+.plans {
+  padding: 100px 0px;
+}
+.plans .container {
+  position: relative;
+}
+.plans h2 {
+  font-size: 50px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  text-transform: uppercase;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-top: 50px;
+  z-index: 10;
+}
+
+.plans-container .cards {
+  background: var(--darkGrey);
+  padding: 20px;
+  /* border-radius: 10px; */
+  box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.plans-container .cards .img-logo svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--orange);
+}
+
+.plans-container .cards h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.plans-container .cards h2 {
+  font-size: 40px;
+}
+
+.plans-container .cards ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plans-container .cards ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: var(--lightgray);
+}
+
+.plans-container .cards ul li img {
+  width: 20px;
+  height: 20px;
+}
+
+.plans-container .cards p {
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plans-container .cards p img {
+  width: 20px;
+  height: 20px;
+}
+
+.plans-container .cards button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  font-weight: 600;
+}
+.plans-container .cards button a {
+  text-decoration: none;
+  color: #000;
+}
+.plans-container .cards:nth-child(2) {
+  background: linear-gradient(to top right, #ff9900, #f24a4afa);
+  color: white;
+  transform: scale(1.2);
+}
+
+.plans-container .cards:nth-child(2) button a {
+  color: var(--orange);
+}
+
+.plans-container .cards:nth-child(2) .img-logo svg {
+  fill: white;
+}
+
+.blur {
+  width: 500px;
+  height: 300px;
+}
+
+.right-blur {
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .plans h2 {
+    font-size: 25px;
+    gap: 30px;
+    text-transform: uppercase;
+  }
+  .plans-container {
+    flex-direction: column;
+  }
+  .plans-container .cards:nth-child(2) {
+    transform: scale(1.06);
+  }
+  .plans-container .cards {
+    width: 80%;
+  }
+  .blur {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans {
+    padding: 50px 0px;
+  }
+  .plans h2 {
+    font-size: 15px;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .plans-container {
+    padding-top: 30px;
+    gap: 30px;
+  }
+  .plans-container .cards {
+    width: 100%;
+  }
+  .plans-container .cards:nth-child(2) {
+    transform: scale(1);
+  }
+  .plans-container .cards h3 {
+    font-size: 18px;
+  }
+  .plans-container .cards h2 {
+    font-size: 35px;
+  }
+  .plans-container .cards ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .blur {
+    width: 300px;
+    height: 300px;
+  }
+}

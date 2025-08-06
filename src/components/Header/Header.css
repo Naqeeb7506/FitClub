@@ -1,0 +1,19 @@
+.logo {
+  width: 200px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.nav-link {
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: var(--orange) !important;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(100);
+}

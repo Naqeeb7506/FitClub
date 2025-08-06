@@ -1,0 +1,108 @@
+.programs {
+  padding: 100px 0px;
+}
+
+.prog-heading {
+  font-size: 50px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  text-transform: uppercase;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-container .prog-card {
+  position: relative;
+  overflow: hidden; /* important to hide the pseudo background */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1;
+}
+
+.card-container .prog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top right, #ff9900, #f24a4afa);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.card-container .prog-card:hover::before {
+  opacity: 1;
+}
+
+/* To make sure your content stays above the gradient */
+.card-container .prog-card > * {
+  position: relative;
+  z-index: 2;
+}
+.card-container .prog-card .icon-img svg {
+  /* width: 0px; */
+  fill: #fff;
+}
+
+.prog-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.prog-card p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prog-heading {
+    font-size: 30px;
+    gap: 37px;
+  }
+  .programs {
+    padding: 50px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .prog-heading {
+    font-size: 17px;
+    gap: 20px;
+  }
+  .prog-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .prog-card p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .programs {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}

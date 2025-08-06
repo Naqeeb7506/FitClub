@@ -1,0 +1,128 @@
+.testimonials {
+  padding: 50px 0px 100px 0px;
+}
+.testimonials .container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 60px;
+}
+.testimonials .container .left-sec {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 70%;
+}
+.testimonials h3 {
+  color: var(--orange);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.testimonials h2 {
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.testimonials .review {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.testimonials .user {
+  font-size: 18px;
+}
+.testimonials .user span {
+  font-size: 18px;
+  color: var(--orange);
+}
+
+.testimonials .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonials .bottom .arrows {
+  display: flex;
+  gap: 20px;
+}
+.testimonials .bottom .arrows img {
+  width: 30px;
+  cursor: pointer;
+}
+/* .testimonials .right-sec {
+  width: 30%;
+} */
+.testimonials .right-sec .user-img {
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+.testimonials .right-sec .user-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonials .right-sec .border-img {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  border: 4px solid var(--orange);
+  left: -12%;
+  top: -5%;
+  z-index: -5;
+}
+
+.testimonials .right-sec .bottom-frame {
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(to top right, #ff9900, #f24a4afa);
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  z-index: -5;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials .container .left-sec {
+    width: 100%;
+  }
+  .testimonials .right-sec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials .container {
+    gap: 50px;
+  }
+  .testimonials h2 {
+    font-size: 40px;
+  }
+  .testimonials .review {
+    font-size: 14px;
+  }
+  .testimonials .user,
+  .testimonials .user span {
+    font-size: 14px;
+  }
+  .testimonials .bottom .arrows img {
+    width: 20px;
+  }
+  .testimonials .right-sec .user-img,
+  .testimonials .right-sec .border-img,
+  .testimonials .right-sec .bottom-frame {
+    width: 250px;
+  }
+  .testimonials .right-sec .border-img {
+    left: -10%;
+  }
+}
